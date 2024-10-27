@@ -1,0 +1,94 @@
+/* FONTS */
+
+@font-face {
+    font-family: "Castellar";
+    src: url("../res/fonts/castellar-regular.ttf");
+}
+
+@font-face {
+    font-family: "Avenir Next Cyr Medium";
+    src: url("../res/fonts/Avenir Next Cyr Medium.ttf");
+}
+
+:root {
+    --primary-color: #25746b;
+    --secondary-color: #ffe68b;
+    --tertiary-color: #fffae8;
+
+    --font-heading-1: 'Castellar';
+    --font-heading-2: 'Castellar';
+    --font-text-1 : 'Avenir Next Cyr Medium';
+
+    --font-primary-color: black;
+    --font-secondary-color: white;
+}
+
+html {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    -webkit-scrollbar {
+        display: none;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* TYPO */
+
+h1 {
+    font-family: 'Castellar';
+    color: var(--secondary-color);
+    font-size: 2rem;
+    font-weight: 100;
+}
+
+h2 {
+    font-family: 'Castellar';
+    color: var(--font-primary-color);
+    font-size: 1.5rem;
+    font-weight: 100;
+    text-align: center;
+    width: 100%;
+    padding-top: 20px;
+
+    @media (max-width: 767.98px) {
+        font-size: 150%;
+    }
+}
+
+h3 {
+    font-family: 'Avenir Next Cyr Medium';
+    color: grey;
+}
+
+section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+p {
+    font-family: var(--font-text-1);
+}
+
+button {
+    font-family: var(--font-text-1);
+    background-color: transparent;
+    border: 2px solid;
+    border-radius: 2px;
+    padding: 10px 30px;
+    margin: 5px;
+
+    @media (max-width: 767.98px) {
+        width: 100%;
+        display: block;
+    }
+}
+
+button:hover {
+    transform: scale(1.05);
+    transition: transform 0.5s;
+}
