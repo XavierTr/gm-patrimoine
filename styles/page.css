@@ -10,19 +10,20 @@
     height: 100vh;
     width: 100vw;
 
-    background-image: url('../res/wp\ compressed.png');           
+    background-image: url('../res/wp\ compressed.png');  
+    background-attachment: fixed;         
     background-size: cover;
     background-repeat: round;
     background-position: 15vw 0;
     @media (max-width: 1216px) {
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: 40% 0;
+        background-position: 40% -80px;
     }
 
     .rose {
-        position: absolute;
-        opacity: 0.03;
+        position: fixed;
+        opacity: 0.02;
         height: 150%;
         width: 30%;
         pointer-events: none;
@@ -45,11 +46,16 @@
         width: 100vw;
         height: 100vh;
         background: linear-gradient(90deg, var(--primary-color) 20%, #00000000 70%),
-        linear-gradient(0, var(--primary-color) 8%, #00000000 30%);
+            linear-gradient(0, var(--primary-color) 8%, #00000000 30%);
 
         @media (max-width: 1216px) {
-            background: linear-gradient(90deg, var(--primary-color) 30%, #00000000 110%),
+            background: linear-gradient(90deg, var(--primary-color) 10%, #00000000 70%),
             linear-gradient(0, var(--primary-color) 8%, #00000000 30%);
+        }
+
+        @media (max-width: 716px) {
+            background: linear-gradient(90deg, var(--primary-color) -10%, #00000000 90%),
+            linear-gradient(0, var(--primary-color) 8%, #00000000 60%);
         }
 
         .heading-lines {
@@ -138,7 +144,7 @@
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            border: 1px solid grey;
+            border: 1px solid black;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -152,7 +158,6 @@
 
     .step {
         width: 100%;
-        color: grey;
         padding-bottom: 0;
 
         p {
@@ -200,6 +205,8 @@
         max-width: 300px;
         padding: 15px;
         padding-right: 25px;
+        z-index: 2;
+        position: relative;
 
         @media (max-width: 1216px) {
             width: 90%;
